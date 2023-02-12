@@ -1,35 +1,20 @@
 package view;
 
-import java.awt.EventQueue;
+import java.awt.Font;
 
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JFormattedTextField;
-import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class ViewTarefa extends JInternalFrame {
 	private JTextField tfTitulo;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ViewTarefa frame = new ViewTarefa();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
@@ -41,7 +26,7 @@ public class ViewTarefa extends JInternalFrame {
 		
 		JLabel lblTituloForm = new JLabel("Cadastro de Tarefa");
 		lblTituloForm.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblTituloForm.setBounds(113, 11, 200, 35);
+		lblTituloForm.setBounds(91, 11, 200, 35);
 		getContentPane().add(lblTituloForm);
 		
 		JLabel lblTitulo = new JLabel("Titulo");
@@ -71,6 +56,14 @@ public class ViewTarefa extends JInternalFrame {
 		
 		JTextArea textArea = new JTextArea();
 		scrollPane.setViewportView(textArea);
+		
+		JButton btnOk = new JButton("OK");
+		btnOk.setBounds(171, 223, 89, 23);
+		getContentPane().add(btnOk);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBounds(270, 223, 89, 23);
+		getContentPane().add(btnCancelar);
 
 	}
 }
